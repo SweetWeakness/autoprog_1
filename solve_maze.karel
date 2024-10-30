@@ -1,0 +1,19 @@
+begin
+    sub findnextmove
+    begin
+        turn left
+        if front_is_blocked
+        then
+            while front_is_blocked
+                turn right
+            end
+        end
+    end
+
+    while not is_beeper
+        call findnextmove
+        move
+    end
+
+    exit
+end

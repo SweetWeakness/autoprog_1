@@ -5,7 +5,13 @@ Program:
 ;
 
 Statement:
-    Definition | Command | StatementIf | StatementWhile
+        Definition | Command | StatementIf | StatementWhile | RepeatNTimes
+;
+
+RepeatNTimes:
+    'repeat' number=INT 'times'
+    commands+=Statement
+    'end'
 ;
 
 Definition:
